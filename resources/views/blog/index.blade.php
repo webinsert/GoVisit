@@ -13,11 +13,14 @@
 
 	@foreach ($posts as $post)
 	<div class="row">
+	        	<div class="col-md-8 col-md-offset-2">
+	                 <img src="{{ asset('images/' . $post->image) }}" class="img-responsive" alt="Responsive image" height="50%" width="50%" style="float: left; border-radius: 5px; margin-right: 10px;">
+                </div>
 	 	<div class="col-md-8 col-md-offset-2">
 	 		<h2>{{ $post->title }}</h2>
 	 		<h5>Published: {{ date('M j, y', strtotime($post->created_at)) }}</h5>
 
-	 		<p>{{ substr(strip_tags($post->body), 0, 250) }}{{ strlen(strip_tags($post->body)) > 250 ? '...' :'' }}</p>
+	 		<p>{{ substr(strip_tags($post->body), 0, 350) }}{{ strlen(strip_tags($post->body)) > 350 ? '...' :'' }}</p>
 
 	 		<a href="{{ route('blog.single', $post->slug) }}" class="btn btn-primary">Read More</a>
 	 		<hr>

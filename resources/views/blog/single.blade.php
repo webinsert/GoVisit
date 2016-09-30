@@ -6,7 +6,7 @@
 
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
-		<img src="{{ asset('images/' . $post->image) }}" class="img-responsive" alt="Responsive image" height="30%" width="30%">
+		<img src="{{ asset('images/' . $post->image) }}" class="img-responsive" alt="Responsive image" height="90%" width="90%" style="border-radius: 5px;">
 			<h1>{{ $post->title }}</h1>
 			<p>{!! $post->body !!}</p>
 			<hr>
